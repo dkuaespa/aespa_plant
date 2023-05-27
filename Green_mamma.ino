@@ -82,11 +82,11 @@ void loop(){
     sendDataPrevMillis = millis();
     int soildMoisture = analogRead(A0);
     float transmit = 1024-soildMoisture;
-    int Moisturepercent = map(soildMoisture, 170,1023,100,0);
+    int Moisture_degree = map(soildMoisture, 170,1023,100,0);
     // Write an Int number on the database path test/int
     
 
-    if (Firebase.RTDB.setInt(&fbdo, "User/Moisturepercent", Moisturepercent)){
+    if (Firebase.RTDB.setInt(&fbdo, "User/Moisture_degree", Moisture_degree)){
       Serial.println("PASSED");
       Serial.println("PATH: " + fbdo.dataPath());
       Serial.println("TYPE: " + fbdo.dataType());
