@@ -75,17 +75,30 @@ void setup(){
   
   Firebase.begin(&config, &auth);
   Firebase.reconnectWiFi(true);
+
+  int kit_num = 2;
+    if (Firebase.RTDB.setInt(&fbdo, "User/kit_num", kit_num)){
+      Serial.println("PASSED");
+      Serial.println("PATH: " + fbdo.dataPath());
+      Serial.println("TYPE: " + fbdo.dataType());
+    }
+    else {
+      Serial.println("FAILED");
+      Serial.println("REASON: " + fbdo.errorReason());
+    }
 }
 
 void loop(){
+   
+
   if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 15000 || sendDataPrevMillis == 0)){
     sendDataPrevMillis = millis();
     int soildMoisture = analogRead(A0);
-    float transmit = 1024-soildMoisture;
     int Moisture_degree = map(soildMoisture, 170,1023,100,0);
-    // Write an Int number on the database path test/int
+
     
 
+    // Write an Int number on the database path test/int
     if (Firebase.RTDB.setInt(&fbdo, "User/Moisture_degree", Moisture_degree)){
       Serial.println("PASSED");
       Serial.println("PATH: " + fbdo.dataPath());
@@ -95,6 +108,7 @@ void loop(){
       Serial.println("FAILED");
       Serial.println("REASON: " + fbdo.errorReason());
     }
+   
     
     
    
