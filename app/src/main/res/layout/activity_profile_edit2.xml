@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profileEdit2">
-
-
     <ImageView
         android:id="@+id/todiary"
         android:layout_width="0dp"
@@ -31,7 +29,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
-        android:id="@+id/back_btn"
+        android:id="@+id/imageView4"
         android:layout_width="165dp"
         android:layout_height="184dp"
         android:layout_marginTop="144dp"
@@ -39,7 +37,7 @@
         app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back" />
+        app:srcCompat="@drawable/shape" />
 
     <ImageView
         android:id="@+id/imageView4_change"

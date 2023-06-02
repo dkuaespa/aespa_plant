@@ -9,11 +9,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class profileEdit2 extends AppCompatActivity {
 
     private ImageView save_btn;
     private ImageView back_btn;
-    private ImageView back;
+    private ImageView toshop;
 
     private ImageView plant_happy;
     private ImageView plant_sad;
@@ -34,7 +39,12 @@ public class profileEdit2 extends AppCompatActivity {
     int imageIndex3 = 0;
     int imageIndex4 = 0;
 
+    int num = 0;
+
     //private FirebaseStorage storage:
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private DatabaseReference databaseReference = database.getReference();
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -43,7 +53,7 @@ public class profileEdit2 extends AppCompatActivity {
         setContentView(R.layout.activity_profile_edit2);
 
         save_btn = (ImageView) findViewById(R.id.imageView17);
-        back_btn = (ImageView) findViewById(R.id.back_btn);
+        back_btn = (ImageView) findViewById(R.id.toshop);
 
         plant_happy = (ImageView) findViewById(R.id.plant_happy);
         plant_sad = (ImageView) findViewById(R.id.plant_sad);
@@ -51,7 +61,7 @@ public class profileEdit2 extends AppCompatActivity {
         flower_sad = (ImageView) findViewById(R.id.flower_sad);
 
 
-        imageView4 = findViewById(R.id.toshop);
+        imageView4 = findViewById(R.id.imageView4);
         imageView4_change = findViewById(R.id.imageView4_change);
         imageView22 = findViewById(R.id.imageView22);
         imageView22_change = findViewById(R.id.imageView22_change);
@@ -70,6 +80,7 @@ public class profileEdit2 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                tablechar(num);
                 Intent intent = new Intent(profileEdit2.this, profileEdit.class);
                 startActivity(intent);
             }
@@ -84,10 +95,12 @@ public class profileEdit2 extends AppCompatActivity {
             }
         });
 
+
         imageView4.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
+                num = 1;
                 if(imageIndex1 == 0){
                     imageView4_change.setVisibility(View.VISIBLE);
                     imageView4.setVisibility(View.INVISIBLE);
@@ -112,6 +125,7 @@ public class profileEdit2 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                num = 2;
                 if(imageIndex2 == 0){
                     imageView22_change.setVisibility(View.VISIBLE);
                     imageView22.setVisibility(View.INVISIBLE);
@@ -136,6 +150,7 @@ public class profileEdit2 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                num = 3;
                 if(imageIndex3 == 0){
                     imageView14_change.setVisibility(View.VISIBLE);
                     imageView14.setVisibility(View.INVISIBLE);
@@ -160,6 +175,7 @@ public class profileEdit2 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                num = 4;
                 if(imageIndex4 == 0){
                     imageView23_change.setVisibility(View.VISIBLE);
                     imageView23.setVisibility(View.INVISIBLE);
@@ -181,6 +197,11 @@ public class profileEdit2 extends AppCompatActivity {
 
 
         });
+    }
+    public void tablechar(int char_num){
+        String uid = user.getUid();
+        tablechar tablechar = new tablechar(char_num);
+        databaseReference.child("table").child(uid).child("char").setValue(tablechar);
     }
 
 

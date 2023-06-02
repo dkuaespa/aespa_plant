@@ -31,34 +31,17 @@
         app:layout_constraintVertical_bias="0.594"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/username_text2"
-        android:layout_width="280dp"
-        android:layout_height="48dp"
-        android:background="@null"
-        android:ems="10"
-        android:hint="유저이름"
-        android:inputType="textPersonName"
-        android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.946"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textview2"
-        android:layout_width="171dp"
+        android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:text="의 식물"
         android:textColor="#568A35"
         android:textSize="23sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="85dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.099"
         tools:ignore="MissingConstraints" />
@@ -76,6 +59,50 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.595"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/plant_happy3"
+        android:layout_width="249dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plant_happy" />
+
+    <ImageView
+        android:id="@+id/plant_sad3"
+        android:layout_width="245dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plant_sad" />
+
+    <ImageView
+        android:id="@+id/flower_sad3"
+        android:layout_width="252dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flower_sad" />
+
+    <ImageView
+        android:id="@+id/flower_happy3"
+        android:layout_width="268dp"
+        android:layout_height="263dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flower_happy" />
 
     <ImageView
         android:id="@+id/imageView16"
@@ -130,7 +157,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView18"
+        android:id="@+id/nothing"
         android:layout_width="133dp"
         android:layout_height="135dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -202,8 +229,6 @@
         android:textColor="#568A35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="@+id/imageView11"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977"
         tools:ignore="MissingConstraints" />
@@ -221,5 +246,30 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.977"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="유저이름"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/textview2"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary2"
+        android:text="프로필 편집"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,15 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-
-
-import android.widget.Button;
 
 import android.widget.Toast;
 
@@ -22,19 +18,35 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class Act_login extends AppCompatActivity {
+    private FirebaseAuth mAuth= FirebaseAuth.getInstance();
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+    private DatabaseReference databaseReference = database.getReference();
+
+    private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference();
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
+
+
 
     private ImageView sign;
     private ImageButton login;
     private EditText editTextEmail;
     private EditText editTextPassword;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_act_login);
 
@@ -72,15 +84,22 @@ public class Act_login extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    Intent intent2 = new Intent(Act_login.this, home_emp.class);
-                    startActivity(intent2);
-                    finish();
+                    Log.e("test",  "현재 로그인되어 있는지 체크 ok");
+                    checkkit();
 
                 } else {
                 }
             }
         };
+
+        boolean logout = getIntent().getBooleanExtra("logout",false);
+        if(logout == true){
+            onStop();
+        }
     }
+
+
+
     public void loginUser(String email, String password){
         firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
@@ -90,6 +109,7 @@ public class Act_login extends AppCompatActivity {
                     Toast.makeText(Act_login.this,"로그인 성공", Toast.LENGTH_SHORT).show();
                     firebaseAuth.addAuthStateListener(firebaseAuthListener);
 
+
                 }
                 else{
                     Toast.makeText(Act_login.this, "아이디 또는 비밀번호가 일치하지 않습니다",Toast.LENGTH_SHORT).show();
@@ -98,6 +118,39 @@ public class Act_login extends AppCompatActivity {
             }
 
         });
+
+
+    }
+
+    public void checkkit(){
+        String uid = mAuth.getCurrentUser().getUid();
+        DatabaseReference keyRef = databaseReference.child("table").child(uid).child("key").child("kit_num");
+        keyRef.addValueEventListener(new ValueEventListener(){
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    // "key" 노드가 존재함
+                    Log.e("test",  uid+ "이미 키트값을 입력함 prof 로 이동");
+                    Log.e("test",  "true임 prof로 이동");
+                    Intent intent2 = new Intent(Act_login.this, home_prof.class);
+                    startActivity(intent2);
+                    finish();
+
+
+                } else {
+                    Log.e("test",  uid+"키트값 존재하지 않음 emp로 이동");
+                    Log.e("test",  "false임 emp로 이동");
+                    Intent intent3 = new Intent(Act_login.this, home_emp.class);
+                    startActivity(intent3);
+                    finish();
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+
+        });
+
     }
 
     @Override
@@ -108,6 +161,7 @@ public class Act_login extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+
         if (firebaseAuthListener != null) {
             firebaseAuth.removeAuthStateListener(firebaseAuthListener);
         }

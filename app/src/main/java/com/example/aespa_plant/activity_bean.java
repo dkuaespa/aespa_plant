@@ -20,11 +20,13 @@ public class activity_bean extends AppCompatActivity {
 
         buy = (ImageView) findViewById(R.id.buy);
         back = (ImageView) findViewById(R.id.toshop);
+        String kind = "been";
 
         buy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(activity_bean.this, activity_credit.class);
+                intent.putExtra("text", kind);
                 startActivity(intent);
             }
         });
