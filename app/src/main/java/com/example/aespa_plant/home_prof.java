@@ -40,6 +40,10 @@ public class home_prof<mAuth> extends AppCompatActivity {
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private DatabaseReference databaseReference = database.getReference();
 
+    private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference();
+    private FirebaseAuth firebaseAuth;
+    private FirebaseAuth.AuthStateListener firebaseAuthListener;
+
 
     private ImageView toshop;
     private ImageView todiary;
@@ -65,7 +69,6 @@ public class home_prof<mAuth> extends AppCompatActivity {
     int status = 0;
 
 
-    private DatabaseReference mDatabase= FirebaseDatabase.getInstance().getReference();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +92,8 @@ public class home_prof<mAuth> extends AppCompatActivity {
         flower_happy.setVisibility(View.INVISIBLE);
         flower_sad.setVisibility(View.INVISIBLE);
         nothing.setVisibility(View.INVISIBLE);
+        //boolean logout = getIntent().getBooleanExtra("logout",false);
+
 
         String uid = user.getUid();
 
@@ -294,6 +299,5 @@ public class home_prof<mAuth> extends AppCompatActivity {
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         notificationManager.cancel(id);
     }
-
 
 }

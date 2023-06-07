@@ -15,26 +15,27 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="64dp"
+            android:id="@+id/imageView29"
+            android:layout_width="60dp"
             android:layout_height="420dp"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             app:srcCompat="@drawable/main_1" />
 
         <ImageView
-            android:id="@+id/imageView29"
-            android:layout_width="64dp"
+            android:id="@+id/imageView14"
+            android:layout_width="60dp"
             android:layout_height="420dp"
             android:layout_marginStart="0dp"
             android:layout_marginLeft="0dp"
             app:srcCompat="@drawable/main_1" />
+
     </LinearLayout>
 
     <ImageView
         android:id="@+id/toshop"
-        android:layout_width="368dp"
-        android:layout_height="724dp"
+        android:layout_width="360dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +93,7 @@
         android:background="@null"
         android:ems="10"
         android:hint="비밀번호 입력"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="@+id/toshop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.398"

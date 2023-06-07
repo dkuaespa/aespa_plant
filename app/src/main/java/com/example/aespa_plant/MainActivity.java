@@ -28,14 +28,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
 
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUser = mAuth.getCurrentUser();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -64,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent2 = new Intent(MainActivity.this, home_prof.class);
                     startActivity(intent2);
                     finish();
-
 
                 } else {
                     Log.e("test",  uid+"키트값 존재하지 않음 emp로 이동");

@@ -20,7 +20,7 @@ public class activity_bean extends AppCompatActivity {
 
         buy = (ImageView) findViewById(R.id.buy);
         back = (ImageView) findViewById(R.id.toshop);
-        String kind = "been";
+        String kind = "bean";
 
         buy.setOnClickListener(new View.OnClickListener() {
             @Override

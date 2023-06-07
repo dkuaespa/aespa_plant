@@ -153,9 +153,7 @@ public class activity_mypage extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Intent intent_logout = new Intent(activity_mypage.this, home_prof.class);
-                //intent_logout.putExtra("logout","true");
+                FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(activity_mypage.this, Act_login.class);
                 startActivity(intent);
                 onStop();
@@ -167,8 +165,6 @@ public class activity_mypage extends AppCompatActivity {
     }
     protected void onStop() {
         super.onStop();
-        firebaseAuth.signOut();
-        //mAuth = null;
         if (firebaseAuthListener != null) {
             firebaseAuth.removeAuthStateListener(firebaseAuthListener);
         }

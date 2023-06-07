@@ -57,8 +57,8 @@ public class Act_singup extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(Act_singup.this, name+"회원가입에 성공!", Toast.LENGTH_SHORT).show();
-                            tablename(name,id, password);
+                            Toast.makeText(Act_singup.this, "회원가입에 성공!", Toast.LENGTH_SHORT).show();
+                            tablename(name,id,password);
                             Intent intent = new Intent(Act_singup.this, Act_login.class);
                             startActivity(intent);
                         } else {
@@ -77,8 +77,7 @@ public class Act_singup extends AppCompatActivity {
     }
 
     public void tablename(String name, String email, String password){
-        String uid = user.getUid();
-        // String uid = mAuth.getCurrentUser().getUid();
+        String uid = mAuth.getCurrentUser().getUid();
         tablename tablename = new tablename(name, email, password);
         databaseReference.child("table").child(uid).child("uid").setValue(tablename);
     }

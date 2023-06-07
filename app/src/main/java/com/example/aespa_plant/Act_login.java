@@ -51,7 +51,13 @@ public class Act_login extends AppCompatActivity {
         setContentView(R.layout.activity_act_login);
 
         firebaseAuth = FirebaseAuth.getInstance();
-
+/*
+        if (firebaseAuth.getCurrentUser() != null) {
+            Intent intent = new Intent(getApplication(), home_prof.class);
+            startActivity(intent);
+            finish();
+        }
+*/
         editTextEmail = (EditText)findViewById(R.id.id);
         editTextPassword =(EditText)findViewById(R.id.password);
 
@@ -92,10 +98,6 @@ public class Act_login extends AppCompatActivity {
             }
         };
 
-        boolean logout = getIntent().getBooleanExtra("logout",false);
-        if(logout == true){
-            onStop();
-        }
     }
 
 
@@ -118,7 +120,6 @@ public class Act_login extends AppCompatActivity {
             }
 
         });
-
 
     }
 
@@ -161,7 +162,6 @@ public class Act_login extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-
         if (firebaseAuthListener != null) {
             firebaseAuth.removeAuthStateListener(firebaseAuthListener);
         }
