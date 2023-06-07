@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".profileEdit">
+
+
+    <ImageView
+        android:id="@+id/todiary"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/basic2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/white_back"
+        android:layout_width="233dp"
+        android:layout_height="276dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="178dp"
+        android:layout_marginBottom="277dp"
+        app:layout_constraintBottom_toBottomOf="@+id/todiary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/todiary"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/shape" />
+
+    <ImageView
+        android:id="@+id/flower_sad2"
+        android:layout_width="252dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flower_sad" />
+
+    <ImageView
+        android:id="@+id/plant_sad2"
+        android:layout_width="245dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plant_sad" />
+
+    <ImageView
+        android:id="@+id/plant_happy2"
+        android:layout_width="249dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plant_happy" />
+
+    <ImageView
+        android:id="@+id/flower_happy2"
+        android:layout_width="268dp"
+        android:layout_height="263dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flower_happy" />
+
+    <EditText
+        android:id="@+id/cname"
+        android:layout_width="334dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="43dp"
+        android:backgroundTint="#568A35"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="캐릭터 이름을 입력해주세요"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#568A35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="107dp"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cname"
+        app:srcCompat="@drawable/button1" />
+
+    <EditText
+        android:id="@+id/keyvalue"
+        android:layout_width="328dp"
+        android:layout_height="57dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="#568A35"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="키 값을 입력해주세요"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#568A35"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cname"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <ImageView
+        android:id="@+id/textView1"
+        android:layout_width="411dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/image1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="108dp"
+        android:gravity="center"
+        android:text="님의 식물"
+        android:textColor="#568A35"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <Button
+        android:id="@+id/click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#AFD485"
+        android:gravity="center"
+        android:text="CLICK"
+        android:textColor="#568A35"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/cname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/toshop"
+        android:layout_width="75dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="캐릭터를 선택해주세요."
+        android:textColor="@color/colorPrimary2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441" />
+
+    <TextView
+        android:id="@+id/u_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:gravity="center"
+        android:hint="유저이름"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/saved_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="276dp"
+        android:hint="saved_key"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.764"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="324dp"
+        android:gravity="center"
+        android:text="캐릭터 이름: "
+        android:textColor="@color/colorPrimary2"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saved_name"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.97" />
+
+    <TextView
+        android:id="@+id/saved_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="324dp"
+        android:hint="saved_name"
+        android:textColor="@color/black"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="276dp"
+        android:gravity="center"
+        android:text="키 값:"
+        android:textColor="@color/colorPrimary2"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saved_name"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

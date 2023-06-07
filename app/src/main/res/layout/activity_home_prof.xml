@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_prof">
+
+    <ImageView
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_white" />
+
+    <TextView
+        android:id="@+id/text_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상태"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.713"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:text="의 식물"
+        android:textColor="#568A35"
+        android:textSize="23sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="85dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수분"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.359"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/plant_happy3"
+        android:layout_width="249dp"
+        android:layout_height="266dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plant_happy" />
+
+    <ImageView
+        android:id="@+id/plant_sad3"
+        android:layout_width="245dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plant_sad" />
+
+    <ImageView
+        android:id="@+id/flower_sad3"
+        android:layout_width="252dp"
+        android:layout_height="249dp"
+        android:layout_marginTop="188dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flower_sad" />
+
+    <ImageView
+        android:id="@+id/flower_happy3"
+        android:layout_width="268dp"
+        android:layout_height="263dp"
+        android:layout_marginTop="172dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flower_happy" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="106dp"
+        android:layout_height="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.314"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.511"
+        app:srcCompat="@drawable/water"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517"
+        app:srcCompat="@drawable/state"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/water_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/state_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/nothing"
+        android:layout_width="133dp"
+        android:layout_height="135dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317"
+        app:srcCompat="?android:attr/alertDialogIcon"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/todiary"
+        android:layout_width="107dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.565"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:srcCompat="@drawable/flower" />
+
+    <ImageView
+        android:id="@+id/tomypage"
+        android:layout_width="107dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.917"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:srcCompat="@drawable/flower" />
+
+    <ImageView
+        android:id="@+id/toshop"
+        android:layout_width="107dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.213"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.987"
+        app:srcCompat="@drawable/flower"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/diary_bnt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일기쓰기"
+        android:textColor="#568A35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mypage_bnt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="44dp"
+        android:text="마이페이지"
+        android:textColor="#568A35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/shop_bnt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쇼핑하기"
+        android:textColor="#568A35"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="유저이름"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toStartOf="@+id/textview2"
+        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary2"
+        android:text="프로필 편집"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
